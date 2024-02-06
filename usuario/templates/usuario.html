@@ -1,0 +1,22 @@
+{% extends 'base_usuario.html' %}
+{% load static %}
+{% block content %}    
+    <div class="usuario">
+      <section class="user">
+        <div class="user__nombre"><img src="{% static 'images/iconos/user.svg' %}" alt=""/>
+          <p>Nombre de Usuario</p>
+        </div>
+      </section>
+    </div>
+    <div class="caja">
+      <section class="citas"> 
+        <div class="citas__principal"><img src="{% static 'images/iconos/calendario.svg' %}" alt=""/><a href="{% url 'proximascitasU' %}">Proximas <br/> Citas</a></div>
+      </section>
+      <section class="bitacora"> 
+        <div class="bitacora__principal"><img src="{% static 'images/iconos/book.svg' %}" alt=""/><a href="{% url 'bitacoraU' %}">Bitacora de <br/>servicio</a></div>
+      </section>
+      <section class="descargas">  
+        <div class="descargas__principal"> <img src="{% static 'images/iconos/descargas.svg' %}" alt=""/><a href="{% url 'descargasU' %}">Descargas </a></div>
+      </section>
+    </div>
+{% endblock %}

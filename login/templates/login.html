@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="login">
+        <div class="login__title"> 
+            
+        </div>
+        <form class="login__container" method="post" action="{% url 'login' %}"><img src="{% static '/images/iconos/login.svg' %}"/>
+            {% csrf_token %}
+            <div class="login__formLogin__box">
+                {% for message in messages %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                <div class= "ins"><h1>Iniciar Sesión</h1> </div>
+                <div class="login__item">
+                    <label for="username"> <strong>Usuario</strong></label>
+                    <div class="icono"> <!---<img src="{% static 'Images/icons/email-login.svg' %}" alt="" id="imgEmail"/>--->
+                        <input class="form-control" id="username" type="text" placeholder="Ingrese su usuario" name="username" required />
+                    </div>
+                    <br>
+                </div>
+                <div class="login__item">
+                    <label for="password"> <strong>Contraseña</strong></label>
+                    <div class="icono"> <!---<img src="{% static 'Images/icons/password.svg' %}" alt=""/>--->
+                        <input class="form-control" id="password" type="password" placeholder="Contraseña" name="password" required/>
+                    </div>
+                </div>
+                <div class="form-group form-group__loginButton"><br><br>
+                    <button type="submit" class="btn btn-warning" id="btnLogin">Iniciar Sesión</button>
+                </div>
+            </div>
+        </form>
+        <br><p>No tienes una cuenta? <a href="{% url 'register_user' %}">Regístrate</a></p>
+    </div>
+{% endblock %}

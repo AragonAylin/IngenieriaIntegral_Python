@@ -1,0 +1,64 @@
+<!DOCTYPE html >
+<html> 
+  {% load static %}
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="initial-scale=1.0"/>
+    <title>INGENIERIA INTEGRAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Raleway:wght@100;300;400;600;800&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/tablet.css' %}" media="screen and (min-width: 768px)"/>
+    <link rel="stylesheet" href="{% static 'css/desktop.css' %}" media="screen and (min-width: 1024px)"/>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}"/>
+    <link rel="shortcut icon" href="{% static 'images/favIcon.png' %}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-B8S94J0pK0L+7k2/wMVkq0HEA7dIEv6/WaZC/GR5q6yCzLc2Hg0aTZ7K22AkrqiqZBYe7Idw7HeJUpcjoCNlqA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body> 
+    <header>
+      <h1>Ingenieria <br/>Integral</h1>
+      <nav class="menu"> 
+        <section class="menu__container"> 
+          <ul class="menu__links"> 
+            <h2>Menú</h2>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'usuario' %}">Inicio</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'proximascitasU' %}">Proximas citas</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'bitacoraU' %}">Bitacoras de servicios</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'descargasU' %}">Descargas</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'login' %}">Cerrar Sesion </a></li>
+          </ul>
+          <div class="menu__hamburger"> <img class="menu__img" src="{% static 'images/iconos/menu.svg' %}" alt="icono de menu"/></div>
+        </section>
+      </nav>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+    <footer>
+      <div class="footer__box">
+        <div class="footer__box__body">
+          <div class="footer__box__body-address"> <img src="{% static 'images/iconos/ubicacion.svg' %}" alt="ícono de ubicación"/>
+            <p>Priv. Rosalia Monroy # 103, Barrio de la Estación, Aguascalientes</p>
+          </div>
+          <div class="footer__box__body-ayuda"><a href="#"> <img src="{% static 'images/iconos/help.svg' %}" alt="Ícono de Ayuda"/></a></div>
+          <div class="footer__box__body-socialmedia">
+            <h2>SÍGUENOS</h2>
+            <div class="footer__box__body-socialmedia-icons"><a href="https://facebook.com"> <img src="{% static 'images/iconos/facebook.svg' %}" alt="Ícono de facebook"/></a><a href="https://instagram.com"> <img src="{% static 'images/iconos/instagram.svg' %}" alt="Ícono de instagram"/></a><a href="https://gmail.com"> <img src="{% static 'images/iconos/gmail.svg' %}" alt="Ícono de gmail"/></a></div>
+          </div>
+        </div>
+        <script src="{% static 'js/app-dist.js' %}"></script>
+      </div>
+    </footer>
+  </body>
+</html>

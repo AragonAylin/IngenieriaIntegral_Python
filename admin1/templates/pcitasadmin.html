@@ -1,0 +1,37 @@
+{% extends 'base_admin.html' %}
+{% load static %}
+{% block content %}
+    <!-- contiene el titulo de la seccion de proximas citas -->
+    <div class="titulo__citasadmin">
+      <p><strong>Proximas Citas</strong></p>
+    </div>
+    <!-- Ccontiene formulario de busqueda de citas -->
+    <div class="buscar__citasadmin">
+      <label for="buscador"> </label>
+      <input type="text" placeholder="Search.." name="search"/>
+      <button type="submit">Buscar</button>
+    </div>
+    <!-- cotiene para seleccionar fechas de inicio y final para las citas -->
+    <div class="proximascitasU">
+      <div class="inicio">
+        <form action="">
+          <!-- Calendario para seleccionar fechas de inicio para las citas -->
+          <label for="calendario"><span>Fecha Inicio</span>
+            <input id="calendario" type="date" name="calendario"/>
+          </label>
+        </form>
+      </div>
+      <div class="final">
+        <form action="">
+          <!-- Calendario para seleccionar fechas final para las citas -->
+          <label for="calendario"><span>Fecha Final</span>
+            <input id="calendario" type="date" name="calendario"/>
+          </label>
+        </form>
+      </div>
+      <!-- Div para separar visualmente las fechas de los botones -->
+      <div class="bt"> </div>
+      <!-- Boton de enviar formulario -->
+      <input type="submit"/>
+    </div>
+{% endblock %}

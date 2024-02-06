@@ -1,0 +1,38 @@
+{% extends 'base_usuario.html' %}
+{% load static %}
+{% block content %}
+    <div class="titulo__descargasU"> 
+      <p><strong>Descargas</strong></p>
+    </div>
+    <div class="buscar__descargasU"> 
+      <label for="buscador"> </label>
+      <input type="text" placeholder="Search.." name="search"/>
+      <button type="submit">Buscar</button>
+    </div>
+    <table class="table table-striped table-hover">
+      <thead> 
+        <tr>                 
+          <th>Documentos</th>
+          <th>Fecha</th>
+          <th>Descargar</th>
+        </tr>
+      </thead>
+      <tbody> 
+        <tr> 
+          <td>001</td>
+          <td>08/18/2023</td>
+          <td> <a class="descarga" href="#descargaProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="descargar">&#xE254; </i></a></td>
+        </tr>
+        <tr> 
+          <td>002</td>
+          <td>02/30/2023 </td>
+          <td> <a class="descarga" href="#descargaProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="descargar">&#xE254;</i></a></td>
+        </tr>
+        <tr> 
+          <td>003</td>
+          <td>10/11/2023 </td>
+          <td> <a class="descarga" href="#descargaProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="descargar">&#xE254;</i></a></td>
+        </tr>
+      </tbody>
+    </table>
+{% endblock %}

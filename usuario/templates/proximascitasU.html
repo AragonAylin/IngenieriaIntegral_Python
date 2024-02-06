@@ -1,0 +1,22 @@
+{% extends 'base_usuario.html' %}
+{% load static %}
+{% block content %}
+    <div class="proximascitasU">
+      <div class="inicio">
+        <form action="">
+          <label for="calendario"><span>Fecha Inicio</span>
+            <input id="calendario" type="date" name="calendario"/>
+          </label>
+        </form>
+      </div>
+      <div class="final">
+        <form action="">
+          <label for="calendario"><span>Fecha Final</span>
+            <input id="calendario" type="date" name="calendario"/>
+          </label>
+        </form>
+      </div>
+      <div class="bt"></div>
+      <input type="submit"/>
+    </div>
+{% endblock %}

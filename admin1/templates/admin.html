@@ -1,0 +1,30 @@
+{% extends 'base_admin.html' %} <!-- manda a llamar el contenido de 'base_admin.html' -->
+{% load static %} <!-- Este comando se utiliza para cargar archivos estáticos, los archivos estáticos suelen incluir recursos como hojas de estilo (CSS), scripts (JavaScript) e imágenes.-->
+{% block content %}
+<!--extensiones que se utilizan para estructurar y reutilizar el código en una aplicación web Djngo -->
+   <div class="admins"> <!-- nombre de la clase -->
+      <section class="admin"> <!-- Sección que muestra información de admin-->
+        <div class="admin__nombre"><img src="{% static 'images/iconos/user.svg' %}" alt=""/>
+          <p>Administrador </p>
+        </div>
+      </section>
+    </div>
+    <div class="caja"> <!-- Contenedor o  clase de secciones principales -->
+      <section class="listac"> 
+        <div class="lista__principal"> <img src="{% static 'images/iconos/login.svg' %}" alt=""/><a href="{% url 'listar' %}">Lista <br/> Clientes</a></div>
+        <!-- imagen y enlace a la lista de clientes -->
+      </section>
+      <section class="citasc"> 
+        <div class="citas__principal"><img src="{% static 'images/iconos/calendario.svg' %}" alt=""/><a href="{% url 'pcitasadmin' %}">Proximas <br/> Citas</a></div>
+        <!-- imagen y enlace a proximas citas -->
+      </section>
+      <section class="bitacorac"> 
+        <div class="bitacora__principal"><img src="{% static 'images/iconos/book.svg' %}" alt=""/><a href="{% url 'bitacorasadmin' %}">Bitacora de <br/>servicio</a></div>
+        <!-- imagen y enlace a la bitacora de servicio -->
+      </section>
+      <section class="descargasc"> 
+        <div class="descargas__principal"> <img src="{% static 'images/iconos/descargas.svg' %}" alt=""/><a href="{% url 'descargasadmin' %}">Descargas </a></div>
+        <!-- imagen y enlace a las descargas-->
+      </section>
+    </div>
+{% endblock %} <!--marca el final del bloque llamado "content" que fue abierto con  block content los bloques son secciones que pueden ser extendidas o sobrescritas por otras plantillas que heredan de la plantilla actual-->
